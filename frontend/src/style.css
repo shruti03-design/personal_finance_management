@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f5f6fa; color: #222; }
+button { background: #5046e5; color: #fff; border: 0; padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+button.link { background: none; color: #5046e5; padding: 0; }
+input, select { width: 100%; padding: 8px; margin: 4px 0 10px; border: 1px solid #ccc; border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 20px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #eee; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 4px 0; }
+.muted { color: #888; } .red { color: #e74c3c; } .greentext { color: #27ae60; } .error { color: #e74c3c; }
+
+/* auth */
+.auth-page { display: grid; place-items: center; height: 100vh; background: #dfe4e2; }
+.auth-box { display: flex; width: 700px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px #0003; }
+.auth-box form, .auth-side { flex: 1; padding: 50px 40px; text-align: center; }
+.auth-box input { background: #eee; border: 0; }
+.auth-side { background: #2f0e0e; color: #fff; display: flex; flex-direction: column; justify-content: center; }
+button.dark { background: #2c2c2c; width: 100%; } button.outline { background: none; border: 1px solid #fff; }
+
+/* layout */
+.layout { display: flex; min-height: 100vh; }
+aside { width: 210px; background: #fff; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.nav { background: none; color: #333; text-align: left; border-radius: 6px; }
+.nav.active { background: #5046e5; color: #fff; } .nav.logout { margin-top: auto; background: #1877f2; color: #fff; }
+main { flex: 1; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 10px 20px; border-radius: 8px; margin-bottom: 16px; }
+header h2 { margin: 0; }
+.bell { position: relative; cursor: pointer; font-size: 22px; }
+.badge { position: absolute; top: -6px; right: -10px; background: #e74c3c; color: #fff; font-size: 11px; border-radius: 10px; padding: 1px 6px; }
+.alerts { position: absolute; right: 0; top: 32px; background: #fff; box-shadow: 0 4px 16px #0003; padding: 10px; width: 260px; font-size: 14px; z-index: 5; border-radius: 6px; }
+.reminder { background: #fff3cd; border: 1px solid #f0c36d; padding: 10px; border-radius: 6px; margin-bottom: 16px; }
+tr.soon { background: #fff8e1; } tr.overdue { background: #fdecea; }
+
+/* panels & cards */
+.panel { background: #fff; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+.panel h3 { margin-top: 0; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; } .grid .panel { margin: 0; } .wide { grid-column: span 2; }
+.big { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+.cards { display: flex; flex-wrap: wrap; gap: 16px; }
+.card { width: 280px; padding: 18px; border-radius: 12px; color: #fff; background: linear-gradient(135deg, #5046e5, #2c2c6c); }
+.card .link { color: #ddd; } .chip { width: 36px; height: 26px; background: #e4c56b; border-radius: 4px; margin-bottom: 14px; }
+.tiles { display: flex; flex-wrap: wrap; gap: 10px; }
+.tile { border: 1px solid #ddd; border-radius: 6px; padding: 10px; min-width: 140px; }
+.tile .amount { background: #eee; padding: 4px; margin: 6px 0; border-radius: 4px; text-align: center; }
+.goal { margin-bottom: 14px; }
+.progress { height: 10px; background: #eee; border-radius: 5px; overflow: hidden; } .progress div { height: 100%; }
+
+/* chart */
+.legend { font-size: 13px; margin-bottom: 6px; } .sw { display: inline-block; width: 24px; height: 10px; margin-left: 8px; }
+.chart { display: flex; height: 200px; gap: 4px; border-bottom: 1px solid #ccc; }
+.col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.bars { flex: 1; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 2px; }
+.bar { width: 40%; min-height: 1px; } .credit { background: #4cc96f; } .debit { background: #ccc; }
+.col small { font-size: 10px; color: #777; }
+
+/* modal */
+.overlay { position: fixed; inset: 0; background: #0006; display: grid; place-items: center; z-index: 10; }
+.modal { background: #fff; padding: 20px; border-radius: 8px; width: 340px; }
+.modal h3 { text-align: center; margin-top: 0; } .close { float: right; cursor: pointer; color: #999; }
+.modal label { font-weight: 600; font-size: 14px; } .green { background: #4caf50; width: 100%; border-radius: 4px; }
